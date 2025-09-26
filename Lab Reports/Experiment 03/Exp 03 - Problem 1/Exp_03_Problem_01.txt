@@ -1,0 +1,32 @@
+Problem 1 Solution:
+
+Derivation of Finite Difference Expressions:
+● Forward Divided Difference (FDD):
+Using Taylor series expansion around point x:
+f(x + h) = f(x) + f'(x)h + f''(x)h²/2! + f'''(x)h³/3! + ...
+Solving for f'(x):
+f'(x) = [f(x + h) - f(x)]/h - f''(x)h/2! - f'''(x)h²/3! - ...
+Forward Divided Difference (1st order):
+f'(x) ≈ [f(x + h) - f(x)]/h
+Truncation error: O(h)
+
+● Backward Divided Difference (BDD):
+Using Taylor series expansion around point x:
+f(x - h) = f(x) - f'(x)h + f''(x)h²/2! - f'''(x)h³/3! + ...
+Solving for f'(x):
+f'(x) = [f(x) - f(x - h)]/h + f''(x)h/2! - f'''(x)h²/3! + ...
+Backward Divided Difference (1st order):
+f'(x) ≈ [f(x) - f(x - h)]/h
+Truncation error: O(h)
+
+● Central Divided Difference (CDD):
+Using Taylor series expansions:
+f(x + h) = f(x) + f'(x)h + f''(x)h²/2! + f'''(x)h³/3! + ...
+f(x - h) = f(x) - f'(x)h + f''(x)h²/2! - f'''(x)h³/3! + ...
+Subtracting the second from the first:
+f(x + h) - f(x - h) = 2f'(x)h + 2f'''(x)h³/3! + ...
+Solving for f'(x):
+f'(x) = [f(x + h) - f(x - h)]/(2h) - f'''(x)h²/3! - ...
+Central Divided Difference (1st order):
+f'(x) ≈ [f(x + h) - f(x - h)]/(2h)
+Truncation error: O(h²) - more accurate than FDD and BDD
