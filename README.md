@@ -7,10 +7,10 @@
 >
 > Software used: MATLAB R2024a (Minimum: MATLAB R2018a)
 
-## 📥 Download
+## 📥 [Download](https://github.com/sakib-ar/EEE282-BRACU/archive/refs/heads/main.zip)
 
 ```bash
-git clone https://github.com/sakib-ar/EEE282-BRACU
+https://github.com/sakib-ar/EEE282-BRACU/archive/refs/heads/main.zip
 
 ```
 
